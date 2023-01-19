@@ -7,7 +7,7 @@ export default function Root() {
 
     return (
         <>
-            <div id="sidebar" className={navigation.state === "loading" ? "loading" : ""}>
+            <div id="sidebar">
                 <h1>React Router Contacts</h1>
                 <div>
                     <form id="search-form" role="search">
@@ -49,7 +49,7 @@ export default function Root() {
                     )}
                 </nav>
             </div>
-            <div id="detail">
+            <div id="detail" className={navigation.state === "loading" ? "loading" : ""}>
                 <Outlet />
             </div>
         </>
